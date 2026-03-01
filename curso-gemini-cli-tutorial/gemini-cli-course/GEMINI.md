@@ -25,6 +25,7 @@ FoodSmash é uma plataforma social para compartilhar combinações inusitadas de
 
 - `app/`: Contém o código-fonte principal da aplicação (padrão Nuxt 4).
   - `assets/css/`: Estilos globais.
+  - `components/`: Componentes de UI reutilizáveis (ex: `FeatureCard.vue`, `ComboCard.vue`).
   - `layouts/`: Layouts da aplicação (ex: `default.vue`).
   - `pages/`: Páginas da aplicação (roteamento automático).
 - `public/`: Arquivos estáticos (favicon, robots.txt).
