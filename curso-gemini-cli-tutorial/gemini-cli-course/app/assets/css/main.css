@@ -329,3 +329,38 @@ h1, .hero-title {
   display: block; /* Added to allow margin auto to center */
   margin: 2rem auto 0 auto; /* Centered with top margin */
 }
+
+/* Tag Pill (Creation Form) */
+.tag-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  color: #1A1A2E; /* Dark color for contrast on white background */
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 0.85rem;
+  font-weight: 500;
+  gap: 0.4rem;
+  line-height: 1;
+}
+
+.tag-pill-icon {
+  cursor: pointer;
+  color: #1A1A2E;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.tag-pill-icon:hover {
+  opacity: 1;
+  color: var(--primary-accent-color);
+}
