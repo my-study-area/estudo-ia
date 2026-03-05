@@ -33,6 +33,10 @@ Can you update the tags input field, to show a pill of the tag below the input w
 `/setting` e depois procure por `Hide Context Window Percentage` e altere para `false`. Isso permite a visualização da porcentagem de uso do contexto. 
 Utilize o comando `/compress` para diminuir a porcentagem de uso.
 
+**AI Studio Google**    
+https://aistudio.google.com/
+
+
 
 **Custom commands**    
 Crie o arquivo `.gemini/commands/component.toml` com o seguinte conteúdo:
