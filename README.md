@@ -34,6 +34,34 @@ Can you update the tags input field, to show a pill of the tag below the input w
 Utilize o comando `/compress` para diminuir a porcentagem de uso.
 
 
+**Custom commands**    
+Crie o arquivo `.gemini/commands/component.toml` com o seguinte conteúdo:
+```
+description = 'Creates a new UI component and test file'
+
+prompt = '''
+
+Before doing anything, run a shell command to see if there's any uncommitted, unstaged or untracked changes on the current branch. If there are uncommited, unstaged or untracked changes, abort this process and tell the user. DO NOT GO ANY FURTHER.
+
+You will be making a new Vue component for the nuxt app as described here - {{args}}.
+
+Your job is to:
+
+1. Derive a safe branch name based on that component description. The format of the branch should be: "component/<slug>", where the <slug> should be lowercase letters, kebab-case, and relatively short but descriptive.
+2. Show the user the branch name you have chosen, and the git command you intend to run (e.g. git switch -c component/avatar).
+3. Run a shell command to switch to the new branch. If there's uncommitted changes: tell the user, abort the process and do NOT continue.
+4. Create a new test file for the component in the ./test/nuxt directory and write a small suite of meaningful tests based on the expected behaviour of the new component. DO NOT RUN THE TESTS YET.
+5. Make the new component in the ./app/components directory. The name of the component can be derived from the component description and should be CamelCase. Keep file names consistant with existing conventions.
+6. When the component is created, run the tests for the component to make sure they all pass. If some fail, fix the component and re-run the tests until they all pass.
+7. Once everything passes, render examples of the new component in the /preview page.
+8. Briefly summarize what you have done to the user.
+```
+
+Exemplo de uso:
+```
+/component A circular Avatar component, which takes in an initial prop and a bgColor prop (which should be limited to a few color choices)
+```
+
 Comandos:
 ```bash
 # cria o arquivo GEMINI.md
