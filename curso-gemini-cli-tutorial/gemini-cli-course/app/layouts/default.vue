@@ -5,9 +5,6 @@
         <NuxtLink to="/" class="navbar-brand">FoodSmash</NuxtLink>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <NuxtLink to="/preview" class="nav-link">Preview</NuxtLink>
-          </li>
-          <li class="nav-item">
             <NuxtLink to="/create" class="btn">Create Combo</NuxtLink>
           </li>
         </ul>
@@ -23,16 +20,3 @@
     </footer>
   </div>
 </template>
-
-<style scoped>
-.nav-link {
-  text-decoration: none;
-  color: var(--text-color-secondary);
-  transition: color 0.3s ease;
-  font-size: 0.9em;
-  margin-right: 1.5rem;
-}
-.nav-link:hover {
-  color: var(--primary-accent-color);
-}
-</style>

@@ -19,6 +19,12 @@ import { BookOpen, Users, Star } from 'lucide-vue-next';
           />
           <button class="search-button">Search</button>
         </div>
+        <div class="active-users">
+          <AvatarCircle initial="J" bgColor="primary" />
+          <AvatarCircle initial="M" bgColor="secondary" />
+          <AvatarCircle initial="D" bgColor="accent" />
+          <span class="active-text">Joining 1,200+ foodies</span>
+        </div>
       </div>
     </div>
     <section class="features-section">

@@ -372,11 +372,13 @@ h1, .hero-title {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 50% !important;
   color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
   user-select: none;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .bg-primary {
@@ -390,4 +392,27 @@ h1, .hero-title {
 
 .bg-accent {
   background-color: var(--background-light);
+}
+
+.active-users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.active-users .avatar-circle {
+  border: 3px solid var(--background-color);
+  margin-left: -12px;
+  box-sizing: border-box; /* Ensure border doesn't change size */
+}
+
+.active-users .avatar-circle:first-child {
+  margin-left: 0;
+}
+
+.active-text {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
 }
