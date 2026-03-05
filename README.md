@@ -57,6 +57,8 @@ Your job is to:
 8. Briefly summarize what you have done to the user.
 ```
 
+Logo após criar o comando é necessário fechar e abrir o cli novamente com o comando `/quit` e depois `gemini`.
+
 Exemplo de uso:
 ```
 /component A circular Avatar component, which takes in an initial prop and a bgColor prop (which should be limited to a few color choices)
