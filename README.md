@@ -73,11 +73,12 @@ Exemplo de uso:
 - `!`: entra no mode shell
 - `ESC`> sai do modo shell
 - `ctrl + f`: intergit com o prompt, por exemplo, quando um comando necessita de uma interação/confirmação de um comando para finalizar um programa, sair, acessar uma ajuda e etc.
+- `npm run test`: para executar este comando no shell do gemini num diretório interno dentro do projeto, deve-se usar o seguinte comando:
+```bash
+npm run test --prefix curso-gemini-cli-tutorial/gemini-cli-course/
+```
 
-
-npm run test
-
-Crie o arquivo `.gemini/commands/commit-message.toml` com o segunte conteúdo:
+Crie o arquivo `.gemini/commands/commit-message.toml` com o seguinte conteúdo:
 
     description = "Create a commit message based on staged changes"
     prompt = '''
@@ -97,7 +98,7 @@ Crie o arquivo `.gemini/commands/commit-message.toml` com o segunte conteúdo:
     * for docs use 📋
 
     '''
-
+> O comando customizado acima, interage com o seu shell para utilizar a saída como contexto para enviar para o Gemini. Após a execução do comando utilize `/copy` para enviar ao ctrl+c a mensagem gerada de IA.
 
 Comandos:
 ```bash
