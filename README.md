@@ -68,6 +68,37 @@ Exemplo de uso:
 /component A circular Avatar component, which takes in an initial prop and a bgColor prop (which should be limited to a few color choices)
 ```
 
+
+**Executando comandos shell no gemini**    
+- `!`: entra no mode shell
+- `ESC`> sai do modo shell
+- `ctrl + f`: intergit com o prompt, por exemplo, quando um comando necessita de uma interação/confirmação de um comando para finalizar um programa, sair, acessar uma ajuda e etc.
+
+
+npm run test
+
+Crie o arquivo `.gemini/commands/commit-message.toml` com o segunte conteúdo:
+
+    description = "Create a commit message based on staged changes"
+    prompt = '''
+
+    Generate a commit message, listing & summarizing the main changes, based on the following git diff:
+
+    ```diff
+    !{git diff --staged}
+
+    ```
+
+    Use emojis for types of changes:
+
+    * for style changes use 🎨
+    * for bug fixes use 🐛
+    * for new features use 🐣
+    * for docs use 📋
+
+    '''
+
+
 Comandos:
 ```bash
 # cria o arquivo GEMINI.md
@@ -78,6 +109,9 @@ Comandos:
 
 # gerencia o histórico de conversas
 /chat list
+
+# copia um texto gerado por um comando, exemplo commit-message criado acima
+/copy
 ```
 
 Shortcuts:
