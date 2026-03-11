@@ -100,6 +100,28 @@ Crie o arquivo `.gemini/commands/commit-message.toml` com o seguinte conteúdo:
     '''
 > O comando customizado acima, interage com o seu shell para utilizar a saída como contexto para enviar para o Gemini. Após a execução do comando utilize `/copy` para enviar ao ctrl+c a mensagem gerada de IA.
 
+
+**Informações sobre MCP**    
+https://context7.com/
+
+
+
+**Nanobanana**    
+https://context7.com/docs/resources/all-clients#gemini-cli
+
+Crie um arquivo chamado `.env` e adicione a sua key conforme o exemplo:
+```
+NANOBANANA_GEMINI_API_KEY=ABC123
+```
+
+```
+/generate I need 3 images for the food combinations on the homepage: one for cheese and marmite, one for crisps and chocolate, and one for strawberries and pepper
+```
+
+```
+can you add the three new images to the combo cards on the homepage?
+```
+
 Comandos:
 ```bash
 # cria o arquivo GEMINI.md
